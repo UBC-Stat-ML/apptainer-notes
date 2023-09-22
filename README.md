@@ -2,7 +2,7 @@
 
 Pick one of the images below:
 
-- [Default image](https://hub.docker.com/r/alexandrebouchardcote/default): a default image covering as much as possible the software requirements of our nextflow scripts (julia, build tools, etc) `docker pull alexandrebouchardcote/default`
+- [Default image](https://hub.docker.com/r/alexandrebouchardcote/default): a default image covering as much as possible the software requirements of our nextflow scripts (julia, build tools, etc) `docker://alexandrebouchardcote/default:latest`
 
 then there are several ways to instruct nextflow to use it for one or all 
 processes in a nextflow script.
