@@ -2,7 +2,7 @@
 
 Pick one of the images below:
 
-- [Default image](https://hub.docker.com/r/alexandrebouchardcote/default): a default image covering as much as possible the software requirements of our nextflow scripts (julia, build tools, etc) `docker://alexandrebouchardcote/default:latest`
+- [Default image](https://hub.docker.com/r/alexandrebouchardcote/default): a default image covering as much as possible the software requirements of our nextflow scripts (julia, build tools, etc) `docker://alexandrebouchardcote/default:0.0.0`
 
 then there are several ways to instruct nextflow to use it for one or all 
 processes in a nextflow script.
@@ -11,7 +11,7 @@ processes in a nextflow script.
 
 ```
 load module apptainer
-./nextflow run myNextFlowFile.nf -with-apptainer docker://alexandrebouchardcote/default:latest
+./nextflow run myNextFlowFile.nf -with-apptainer docker://alexandrebouchardcote/default:0.0.0
 ```
 
 ### Integration into the script
@@ -20,6 +20,15 @@ For reproducibility, it is better to specify the docker container in the nextflo
 files. 
 
 TODO
+
+### Logging into the container
+
+Useful for debugging:
+
+```
+load module apptainer
+apptainer shell docker://alexandrebouchardcote/default:0.0.0
+```
 
 
 ## Creating/improving an image
