@@ -1,4 +1,3 @@
-BootStrap: docker
 From: julia
 
 %post
