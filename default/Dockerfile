@@ -11,3 +11,6 @@ RUN apt-get update && apt-get install -y \
 RUN curl -s "https://get.sdkman.io" | bash
 RUN bash -c "source /root/.sdkman/bin/sdkman-init.sh && sdk install java 11.0.20-tem"
 ENV PATH="$PATH:/root/.sdkman/candidates/java/current/bin/"
+
+# clean up to reduce image size
+RUN rm -rf /var/lib/apt/lists/*
