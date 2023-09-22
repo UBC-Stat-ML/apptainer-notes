@@ -55,7 +55,7 @@ then
 fi
 
 # tag the git repo
-git tag -a $container:$tag -m "Automatic tag for $container:$tag"
+git tag -a ${container}_${tag} -m "Automatic tag for $container:$tag"
 
 # perform docker operation
 cd $container
