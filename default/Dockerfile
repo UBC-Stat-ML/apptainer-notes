@@ -4,8 +4,7 @@ RUN apt-get update && apt-get install -y \
   wget curl unzip zip # for sdkman \
   procps # nextflow instrumentation \
   git \
-  build-essential # for Stan \
-  g++ 
+  build-essential make g++ # for Stan 
 
 # java 11 via sdkman
 RUN curl -s "https://get.sdkman.io" | bash
