@@ -48,4 +48,8 @@ https://blog.jaimyn.dev/how-to-build-multi-architecture-docker-images-on-an-m1-m
 
 ### Misc tips when creating an image
 
-TODO
+- To login interactively in docker:
+```
+docker build -t temp .
+docker run -ti temp:latest bash
+```
