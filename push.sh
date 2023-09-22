@@ -40,6 +40,11 @@ function is_git_remote_up_to_date {
 
 }
 
+if ! [ -f "push.sh" ]; then
+  echo "Run from root of the containers repo"
+  exit 1
+fi
+
 echo "Checking everything is committed.."
 if ! is_git_clean
 then
@@ -55,13 +60,12 @@ then
 fi
 
 # tag the git repo
+# this will stop the script if tag already exists
 git tag -a ${container}_${tag} -m "Automatic tag for $container:$tag"
 
 # perform docker operation
-cd $container
 docker buildx create --use
-docker buildx build --platform linux/amd64,linux/arm64 -t $docker_username/$container:$tag --push .
-cd -
+docker buildx build --platform linux/amd64,linux/arm64 -t $docker_username/$container:$tag --push $container
 
 # push the tag to git 
-git push
+git push --tags
