@@ -1,10 +1,10 @@
 FROM julia:1.9.3-bookworm
 
 RUN apt-get update && apt-get install -y \
-  wget curl unzip zip # for sdkman \
-  procps # nextflow instrumentation \
+  wget curl unzip zip \
+  procps \
   git \
-  build-essential make g++ # for Stan 
+  build-essential g++ 
 
 # java 11 via sdkman
 RUN curl -s "https://get.sdkman.io" | bash
