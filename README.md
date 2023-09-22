@@ -4,7 +4,7 @@
 
 Pick one of the images below:
 
-- [Test image containing Julia only](https://hub.docker.com/r/alexandrebouchardcote/test/tags): `alexandrebouchardcote/test:multi`
+- [Test image containing Julia only](https://hub.docker.com/r/alexandrebouchardcote/test/tags): `docker://alexandrebouchardcote/test:multi`
 
 then there are several ways to instruct nextflow to use it for one or all 
 processes in a nextflow script.
