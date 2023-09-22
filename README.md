@@ -26,6 +26,7 @@ TODO
 
 - Sign up to the free docker hub account. 
 - Download docker desktop
+- Edit `push.sh` so that `docker_username=..` matches with your docker hub username.
 
 Then in order to create images on an Apple Silicon machine that run on x86, follow these steps (from 
 https://blog.jaimyn.dev/how-to-build-multi-architecture-docker-images-on-an-m1-mac/ )
