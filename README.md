@@ -2,7 +2,8 @@
 
 Pick one of the images below (make sure to follow the link to get the latest tag version):
 
-- [Default image](https://hub.docker.com/r/alexandrebouchardcote/default): a default image covering as much as possible the software requirements of our nextflow scripts (julia, build tools, etc) `docker://alexandrebouchardcote/default:0.1.1`
+- [Default image](https://hub.docker.com/r/alexandrebouchardcote/default): a default image covering as much as possible the software requirements of our nextflow scripts (julia, build tools, etc) `docker://alexandrebouchardcote/default:0.1.3`
+- [Blang image](https://hub.docker.com/r/alexandrebouchardcote/blang): to run the Blang CLI `docker://alexandrebouchardcote/blang:0.0.0`
 
 then there are several ways to instruct nextflow to use it for one or all 
 processes in a nextflow script.
@@ -11,7 +12,7 @@ processes in a nextflow script.
 
 ```
 load module apptainer
-./nextflow run myNextFlowFile.nf -with-apptainer docker://alexandrebouchardcote/default:0.1.1
+./nextflow run myNextFlowFile.nf -with-apptainer docker://alexandrebouchardcote/default:0.1.3
 ```
 
 ### Integration into the script
@@ -27,7 +28,7 @@ Useful for debugging:
 
 ```
 load module apptainer
-apptainer shell docker://alexandrebouchardcote/default:0.1.1
+apptainer shell docker://alexandrebouchardcote/default:0.1.3
 ```
 
 
