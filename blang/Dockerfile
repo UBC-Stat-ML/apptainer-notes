@@ -1,9 +1,10 @@
-FROM rocker/r-ver:4.3.1
+FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y \
   wget curl unzip zip \
   procps \
-  git 
+  git \
+  r-base
 
 # java 11 via sdkman
 RUN curl -s "https://get.sdkman.io" | bash
@@ -17,7 +18,9 @@ WORKDIR "/usr/local/blangSDK"
 RUN bash setup-cli.sh
 ENV PATH="$PATH:/usr/local/blangSDK/build/install/blang/bin"
 
-RUN R -e "install.packages('tidyverse')"
+RUN R -e "install.packages(c('dplyr', 'ggplot2', 'tidyr'), \
+                           dependencies=TRUE, \
+                           repos='http://cran.rstudio.com/')"
 
 ENTRYPOINT ["blang"]
 
