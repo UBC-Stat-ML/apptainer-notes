@@ -38,7 +38,7 @@ apptainer shell docker://alexandrebouchardcote/default:0.1.3
 - Download docker desktop
 - Edit `push.sh` so that `docker_username=..` matches with your docker hub username.
 
-Then in order to create images on an Apple Silicon machine that run on x86, follow these steps (from 
+Then in order to create images that will work both on Apple Silicon and x86, follow these steps (from 
 https://blog.jaimyn.dev/how-to-build-multi-architecture-docker-images-on-an-m1-mac/ )
 
 1. Duplicate the folder `default`, give it a meaningful name, denoted `mycontainer` in the following, and modify its Dockerfile as needed
