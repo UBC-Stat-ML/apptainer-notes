@@ -1,2 +1,1 @@
-A default image covering as much as possible the software requirements 
-of our nextflow scripts. 
+An image for reproducing the results of the autoMALA paper.
