@@ -1,6 +1,7 @@
 FROM julia:1.9.3-bookworm
 
 RUN apt-get update && apt-get install -y \
+  ca-certificates \
   wget curl unzip zip \
   procps \
   git \
