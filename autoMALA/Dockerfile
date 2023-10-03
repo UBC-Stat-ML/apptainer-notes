@@ -13,5 +13,6 @@ RUN wget --progress=dot:mega "https://github.com/stan-dev/cmdstan/releases/downl
 ENV CMDSTAN=/cmdstan-$CMDSTAN_VERSION
 
 # clean up to reduce image size
+RUN rm cmdstan-$CMDSTAN_VERSION.tar.gz
 RUN rm -rf /var/lib/apt/lists/*
 
