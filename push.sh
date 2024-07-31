@@ -61,9 +61,11 @@ fi
 
 # tag the git repo
 # this will stop the script if tag already exists
+echo "Taggint the git repo..."
 git tag -a ${container}_${tag} -m "Automatic tag for $container:$tag"
 
 # perform docker operation
+echo "Performing docker operation..."
 docker buildx create --use
 docker buildx build --platform linux/amd64,linux/arm64 -t $docker_username/$container:$tag --push $container
 
