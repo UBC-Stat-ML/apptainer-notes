@@ -1,4 +1,4 @@
-FROM julia:1.10.2-bookworm
+FROM julia:1.10.4-bookworm
 
 RUN apt-get update && apt-get install -y \
   ca-certificates \
@@ -9,13 +9,13 @@ RUN apt-get update && apt-get install -y \
 
 # java 11 via sdkman
 RUN curl -s "https://get.sdkman.io" | bash
-RUN bash -c "source /root/.sdkman/bin/sdkman-init.sh && sdk install java 11.0.22-tem"
+RUN bash -c "source /root/.sdkman/bin/sdkman-init.sh && sdk install java 11.0.24-tem"
 RUN mv /root/.sdkman /usr/local/sdkman
 ENV PATH="$PATH:/usr/local/sdkman/candidates/java/current/bin/"
 
 # cmdstan
 # based on https://github.com/tpapp/cmdstan-docker/
-ENV CMDSTAN_VERSION 2.34.1
+ENV CMDSTAN_VERSION 2.35.0
 RUN wget --progress=dot:mega "https://github.com/stan-dev/cmdstan/releases/download/v$CMDSTAN_VERSION/cmdstan-$CMDSTAN_VERSION.tar.gz" && \
         tar -zxpf "cmdstan-$CMDSTAN_VERSION.tar.gz" && \
         cd "cmdstan-$CMDSTAN_VERSION" && \
