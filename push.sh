@@ -11,7 +11,7 @@ fi
 
 container=$1
 tag=$2
-docker_username=alexandrebouchardcote
+docker_username="${DOCKER_USERNAME:-alexandrebouchardcote}"
 
 function is_git_clean {
 
