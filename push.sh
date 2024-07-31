@@ -61,7 +61,7 @@ fi
 
 # tag the git repo
 # this will stop the script if tag already exists
-echo "Taggint the git repo..."
+echo "Tagging the git repo..."
 git tag -a ${container}_${tag} -m "Automatic tag for $container:$tag"
 
 # perform docker operation
