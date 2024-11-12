@@ -15,12 +15,6 @@ load module apptainer
 ./nextflow run myNextFlowFile.nf -with-apptainer docker://alexandrebouchardcote/default:0.1.3
 ```
 
-### Integration into the script
-
-For reproducibility, it is better to specify the docker container in the nextflow configuration 
-files. 
-
-TODO
 
 ### Logging into the container
 
